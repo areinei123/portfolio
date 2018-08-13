@@ -2,7 +2,7 @@ import React from 'react'
 import Link from './Link.jsx'
 import Icon from './Icon.jsx'
 
-const Navigation = () => {
+const Navigation = ({onNavigate}) => {
   let style = {
     height: '50px',
     backgroundColor: 'hsl(240, 10%, 25%)',
@@ -13,11 +13,11 @@ const Navigation = () => {
 
   return (
     <div style={style}>
-      <Link label='Home'/>
-      <Link label='Resume'/>
+      <Link label='Home' href='home' onClick={onNavigate}/>
+      <Link label='Resume' href='resume' onClick={onNavigate}/>
       <Icon />
-      <Link label='Projects'/>
-      <Link label='Blog'/>
+      <Link label='Projects' href='projects' onClick={onNavigate}/>
+      <Link label='Blog' href='blog' onClick={onNavigate}/>
     </div>
   )
 }
