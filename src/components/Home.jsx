@@ -1,9 +1,12 @@
 import React from 'react'
+import LeadImage from './LeadImage.jsx'
+import AboutMe from './AboutMe.jsx'
 
 const Home = () => {
   return (
     <div>
-      Welcome to my humble website
+      <LeadImage/>
+      <AboutMe/>
     </div>
   )
 }

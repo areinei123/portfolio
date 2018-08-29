@@ -1,6 +1,8 @@
 import React, {Fragment} from 'react'
 import Navigation from '../components/Navigation.jsx'
 import Content from '../components/Content.jsx'
+import ErrorBoundary from './ErrorBoundary.js'
+import Footer from '../components/Footer.jsx'
 
 // let store
 
@@ -8,7 +10,7 @@ class App extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      page: 'home'
+      page: window.location.pathname.slice(1) || 'home'
     }
 
     // store = createStore(
@@ -26,8 +28,11 @@ class App extends React.Component{
   render(){
     return (
       <Fragment>
-        <Navigation onNavigate={this.onNavigate}></Navigation>
-        <Content page={this.state.page}></Content>
+        <ErrorBoundary>
+          <Navigation onNavigate={this.onNavigate}></Navigation>
+          <Content page={this.state.page}></Content>
+          <Footer/>
+        </ErrorBoundary>
       </Fragment>
     )
   }
