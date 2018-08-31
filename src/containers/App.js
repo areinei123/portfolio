@@ -5,6 +5,7 @@ import ErrorBoundary from './ErrorBoundary.js'
 import Footer from '../components/Footer.jsx'
 
 // let store
+const ThemeContext = React.createContext('light')
 
 class App extends React.Component{
   constructor(props){
@@ -27,13 +28,13 @@ class App extends React.Component{
 
   render(){
     return (
-      <Fragment>
+      <ThemeContext.Provider>
         <ErrorBoundary>
           <Navigation onNavigate={this.onNavigate}></Navigation>
           <Content page={this.state.page}></Content>
           <Footer/>
         </ErrorBoundary>
-      </Fragment>
+      </ThemeContext.Provider>
     )
   }
 }
