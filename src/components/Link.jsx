@@ -8,9 +8,9 @@ const Link = ({label, href, onClick}) => {
   }
 
   const onLinkClick = (event) => {
-    event.preventDefault
-    console.log(href)
-    onClick(href)
+    onClick()
+    window.location.pathname = '/'+href
+    event.preventDefault()
   }
 
   return (

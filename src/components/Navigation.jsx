@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from './Link.jsx'
+import NavigationLink from '../containers/NavigationLink.jsx'
 import Icon from './Icon.jsx'
 
 const Navigation = ({onNavigate}) => {
@@ -13,11 +13,11 @@ const Navigation = ({onNavigate}) => {
 
   return (
     <div style={style}>
-      <Link label='Home' href='home' onClick={onNavigate}/>
-      <Link label='Resume' href='resume' onClick={onNavigate}/>
+      <NavigationLink label='Home' href='home' onClick={onNavigate}/>
+      <NavigationLink label='Resume' href='resume' onClick={onNavigate}/>
       <Icon />
-      <Link label='Projects' href='projects' onClick={onNavigate}/>
-      <Link label='Blog' href='blog' onClick={onNavigate}/>
+      <NavigationLink label='Projects' href='projects' onClick={onNavigate}/>
+      <NavigationLink label='Blog' href='blog' onClick={onNavigate}/>
     </div>
   )
 }

@@ -1,8 +1,8 @@
 import React from 'react'
-import Home from './Home.jsx'
-import Resume from './Resume.jsx'
-import Projects from './Projects.jsx'
-import Blog from './Blog.jsx'
+import Home from '../components/Home.jsx'
+import Resume from '../components/Resume.jsx'
+import Projects from '../components/Projects.jsx'
+import Blog from '../components/Blog.jsx'
 import Constants from '../style/constants.js'
 
 const Content = ({page}) => {
