@@ -1,7 +1,8 @@
 import React from 'react'
 
 const Constants = {
-  darkBackground: 'black'
+  darkBackground: 'black',
+  lightBackground: 'white'
 }
 
 const Themes = {

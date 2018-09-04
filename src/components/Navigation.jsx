@@ -1,23 +1,26 @@
 import React from 'react'
 import NavigationLink from '../containers/NavigationLink.jsx'
-import Icon from './Icon.jsx'
+import StatefulIcon from '../containers/StatefulIcon.jsx'
 
-const Navigation = ({onNavigate}) => {
+const Navigation = ({}) => {
   let style = {
-    height: '50px',
+    height: '75px',
     backgroundColor: 'hsl(240, 10%, 25%)',
     display: 'flex',
     justifyContent: 'space-around',
-    alignItems: 'center'
+    alignItems: 'center',
+    position: 'fixed',
+    width: '100%',
+    zIndex: 3
   }
 
   return (
     <div style={style}>
-      <NavigationLink label='Home' href='home' onClick={onNavigate}/>
-      <NavigationLink label='Resume' href='resume' onClick={onNavigate}/>
-      <Icon />
-      <NavigationLink label='Projects' href='projects' onClick={onNavigate}/>
-      <NavigationLink label='Blog' href='blog' onClick={onNavigate}/>
+      <NavigationLink label='Home' href='home'/>
+      <NavigationLink label='Resume' href='resume'/>
+      <StatefulIcon />
+      <NavigationLink label='Projects' href='projects'/>
+      <NavigationLink label='Blog' href='blog'/>
     </div>
   )
 }

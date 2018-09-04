@@ -8,7 +8,7 @@ export const themeTypes = {
 
 export function changeTheme(theme){
   return {
-    type: CHANGE_THEME,
+    type: 'CHANGE_THEME',
     theme: theme
   }
 }

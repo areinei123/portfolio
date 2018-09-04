@@ -3,7 +3,7 @@ import Home from '../components/Home.jsx'
 import Resume from '../components/Resume.jsx'
 import Projects from '../components/Projects.jsx'
 import Blog from '../components/Blog.jsx'
-import Constants from '../style/constants.js'
+import Themes from '../style/constants.js'
 
 const Content = ({page}) => {
   let homeStyle = {
@@ -19,19 +19,19 @@ const Content = ({page}) => {
       )
     case 'resume':
       return (
-        <div style={Constants.contentSpacing}>
+        <div style={Themes.contentSpacing}>
           <Resume/>
         </div>
       )
     case 'projects':
       return (
-        <div style={Constants.contentSpacing}>
+        <div style={Themes.contentSpacing}>
           <Projects/>
         </div>
       )
     case 'blog':
       return (
-        <div style={Constants.contentSpacing}>
+        <div style={Themes.contentSpacing}>
           <Blog/>
         </div>
       )
