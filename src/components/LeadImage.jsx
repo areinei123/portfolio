@@ -1,28 +1,31 @@
 import React from 'react'
+import {Constants} from '../style/constants.js'
 
-const LeadImage = ({}) => {
-  let shading = {
-    width: '100%',
-    height: '100%',
-    background: 'rgba(0,0,0,0.5)',
-    position: 'absolute',
-    top: '0',
-    left: '0'
-  }
+const LeadImage = ({theme}) => {
+  // let shading = {
+  //   width: '100%',
+  //   height: '100%',
+  //   background: theme === 'light' ? 'rgba(0,0,0,0)' : 'rgba(0,0,0,0.5)',
+  //   position: 'absolute',
+  //   top: '0',
+  //   left: '0'
+  // }
 
   let image = {
     width: '100%',
     height: '100%',
     position: 'absolute',
     top: '0',
-    left: '0'
+    left: '0',
+    backgroundRepeat: "repeat",
+    backgroundImage: 'url('+Constants[theme+'LeadImageUrl']+')'
   }
 
   let text = {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    color: 'white',
+    color: theme === 'light' ? 'black' : 'white',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -36,12 +39,11 @@ const LeadImage = ({}) => {
 
   return(
     <div style={wrapper}>
-      <img style={image}
-        src='http://gravitatecreative.com/wp-content/uploads/2016/03/Importance-of-Background-Design-pic.jpg'/>
-      <div style={shading}/>
+      <div style={image}/>
       <span style={text}>I'm a header</span>
     </div>
   )
+      // <div style={shading}/>
 }
 
 export default LeadImage 

@@ -2,15 +2,16 @@ import React from 'react'
 
 const Icon = ({isOpen, theme, onMenuClick, onThemeClick}) => {
   let iconWrapper = {
-    position: 'absolute'
+    position: 'relative'
   }
 
   let iconStyle = {
-    width: '135px'
+    width: '135px',
+    cursor: 'pointer'
   }
 
   let selectThemeStyle = {
-    // position: 'absolute',
+    position: 'absolute',
     marginTop: '-10px',
     background: 'white',
     padding: '15px',

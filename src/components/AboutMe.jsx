@@ -1,10 +1,10 @@
 import React from 'react'
-import Themes from '../style/constants.js'
+import {Themes} from '../style/constants.js'
 
-const AboutMe = ({}) => {
+const AboutMe = ({theme}) => {
 
   return (
-      <div style={Themes.dark.contentSpacing}>
+      <div style={Themes[theme].contentSpacing}>
         <h1>who is fred chapman?</h1>
         <p>
           hey there, i'm fred, a programmer and ui/ux designer that's always looking for things

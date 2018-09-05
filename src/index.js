@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import App from './components/App.js'
+import StatefulApp from './containers/StatefulApp.jsx'
 import { createStore } from 'redux'
 import rootReducer from './reducers/index.js'
 
@@ -11,6 +11,6 @@ const store = createStore(
 )
 
 ReactDOM.render(
-  <Provider store={store}><App/></Provider>
+  <Provider store={store}><StatefulApp/></Provider>
   , document.getElementById('app')
 )

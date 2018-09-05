@@ -2,11 +2,11 @@ import React from 'react'
 import LeadImage from './LeadImage.jsx'
 import AboutMe from './AboutMe.jsx'
 
-const Home = () => {
+const Home = ({theme}) => {
   return (
     <div>
-      <LeadImage/>
-      <AboutMe/>
+      <LeadImage theme={theme}/>
+      <AboutMe theme={theme}/>
     </div>
   )
 }

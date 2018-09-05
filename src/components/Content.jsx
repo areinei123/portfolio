@@ -3,9 +3,9 @@ import Home from '../components/Home.jsx'
 import Resume from '../components/Resume.jsx'
 import Projects from '../components/Projects.jsx'
 import Blog from '../components/Blog.jsx'
-import Themes from '../style/constants.js'
+import {Themes} from '../style/constants.js'
 
-const Content = ({page}) => {
+const Content = ({page, theme}) => {
   let homeStyle = {
     margin: '5px'
   }
@@ -14,31 +14,31 @@ const Content = ({page}) => {
     case 'home':
       return (
         <div>
-          <Home/>
+          <Home theme={theme}/>
         </div>
       )
     case 'resume':
       return (
-        <div style={Themes.contentSpacing}>
+        <div style={Themes[theme].contentSpacing}>
           <Resume/>
         </div>
       )
     case 'projects':
       return (
-        <div style={Themes.contentSpacing}>
+        <div style={Themes[theme].contentSpacing}>
           <Projects/>
         </div>
       )
     case 'blog':
       return (
-        <div style={Themes.contentSpacing}>
+        <div style={Themes[theme].contentSpacing}>
           <Blog/>
         </div>
       )
     default:
       return (
         <div>
-          <Home/>
+          <Home theme={theme}/>
         </div>
       )
   }

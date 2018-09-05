@@ -3,7 +3,8 @@ import {connect} from 'react-redux'
 import Content from '../components/Content.jsx'
 
 const mapStateToProps = (state, ownProps) => ({
-  page: state.navigation
+  page: state.navigation,
+  theme: state.theme
 })
 
 // const mapDispatchToProps = (dispatch, ownProps) => ({
